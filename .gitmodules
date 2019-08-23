@@ -1,0 +1,6 @@
+[submodule "thea2"]
+	path = thea2
+	url = git@github.com:conceptsinmotion/thea
+[submodule "ontoTextProv"]
+	path = ontoTextProv
+	url = git@github.com:conceptsinmotion/ontoTextProv
