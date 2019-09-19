@@ -2,6 +2,7 @@
 :- use_module(thea2/owl2_manchester_parser).
 :- use_module(thea2/owl2_export_manchester).
 :- use_module(library(semweb/rdf11)).
+:- [reason].
 
 :- rdf_register_prefix(dt,
                        'https://conceptsinmotion.org/e-ideas/datatype/').
@@ -42,3 +43,11 @@ write_ontology_header(Stream) :-
            format(Stream, 'Prefix: ~w: <~w>~n', [Prefix, URL])),
     format(Stream, '~nOntology: <http://example.org/ontologies>~n~n', []).
 
+save_results :-
+    save_results('results.omn').
+
+save_results(File) :-
+    owl_generate_manchester(
+        File,
+        [ prefix('https://conceptsinmotion.org/e-ideas/lexicon/bolzano#')
+        ]).
