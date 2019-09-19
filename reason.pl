@@ -24,5 +24,4 @@ validate(X) :-
 
 initialize_reasoner :-
 %   debug(owl2),
-    load,
     initialize_reasoner(pellet, _Reasoner).
