@@ -51,3 +51,9 @@ save_results(File) :-
         File,
         [ prefix('https://conceptsinmotion.org/e-ideas/lexicon/bolzano#')
         ]).
+
+reason :-
+    initialize_reasoner,
+    forall(reasoner_ask(subClassOf(Sub,Super)),
+           assert_axiom(subClassOf(Sub,Super))),
+    save_results.
