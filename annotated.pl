@@ -14,6 +14,9 @@
                        'https://conceptsinmotion.org/e-ideas/ontologies/bolzano#').
 :- rdf_register_prefix(blz_lex,
                        'https://conceptsinmotion.org/e-ideas/lexicon/bolzano#').
+:- rdf_register_prefix(vocab,
+                       'https://conceptsinmotion.org/e-ideas/vocabulary/').
+
 
 load_lemon :-
     rdf_load('ontoTextProv/caseStudy/BolzSymbolicIdeaLemon.ttl').
