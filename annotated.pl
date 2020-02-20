@@ -49,7 +49,7 @@ load_manchester :-
           (   print_message(error, E),
               fail
           )),
-    delete_file(FileName).
+    writeln(FileName).
 
 load_manchester(Theory) :-
     setup_call_cleanup(
@@ -68,7 +68,7 @@ load_manchester(Theory) :-
           (   print_message(error, E),
               fail
           )),
-    delete_file(FileName).
+    writeln(FileName).                          % should be delete_file(FileName)
 
 write_ontology_prefix(Stream) :-
     forall(rdf_current_prefix(Prefix, URL),
