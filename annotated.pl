@@ -76,8 +76,7 @@ write_ontology_prefix(Stream) :-
 
 write_ontology_header(Stream) :-
     forall(rdf_current_prefix(Prefix, URL),
-           format(Stream, 'Prefix: ~w: <~w>~n', [Prefix, URL])),
-    format(Stream, '~nOntology: <http://example.org/ontologies>~n~n', []).
+           format(Stream, 'Prefix: ~w: <~w>~n', [Prefix, URL])).
 
 save_results :-
     save_results('results.omn').
